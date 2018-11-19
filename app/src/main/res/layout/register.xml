@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical">
+
+
+    //Titulo app
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="REGISTRO"
+        android:textColor="@color/TituloColor"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    //Campo nombre
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Nombre"
+        android:textColor="@color/TituloColor"
+        android:textSize="20dp" />-->
+
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Nombre" />
+
+
+    //Campo Apellido
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Apellido"
+        android:textColor="@color/TituloColor"
+        android:textSize="20dp" />-->
+
+
+    <EditText
+        android:id="@+id/etApellido"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Apellido" />
+
+
+    //Campo Correo
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Correo"
+        android:textColor="@color/TituloColor"
+        android:textSize="20dp" />-->
+
+
+    <EditText
+        android:id="@+id/etCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Correo"
+        android:inputType="textEmailAddress" />
+
+
+    //Campo Telefono
+
+   <!-- <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Telefono"
+        android:textColor="@color/TituloColor"
+        android:textSize="20dp" />-->
+
+
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Telefono"
+        android:inputType="number" />
+
+
+    //Campo UserName
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="UserName"
+        android:textColor="@color/TituloColor"
+        android:textSize="20dp" />-->
+
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Username" />
+
+
+    //Campo Pass
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Password"
+        android:textColor="@color/TituloColor"
+        android:textSize="20dp" />-->
+
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <RadioGroup
+        android:id="@+id/rGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        //rdHombre
+
+        <RadioButton
+            android:id="@+id/rbHombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:checked="true"
+            android:gravity="center"
+            android:text="Hombre" />
+
+
+        //rdMujer
+
+        <RadioButton
+            android:id="@+id/rbMujer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="Mujer" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        //Registro
+
+        <Button
+            android:id="@+id/bRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@color/btColor"
+            android:gravity="center"
+            android:onClick="bRegistroPuls"
+            android:text="Registro" />
+
+        //Registro
+
+        <Button
+            android:id="@+id/bCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@color/btColor"
+            android:onClick="bCancelarPuls"
+            android:text="Cancelar" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

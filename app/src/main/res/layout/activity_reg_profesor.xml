@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical"
+    tools:context=".RegProfesor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:gravity="center"
+        android:text="REGISTRO \nProfesor"
+        android:textColor="@color/TituloColor"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etProNombre"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Nombre"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/etProApellido"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Apellido"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/etProEdad"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Edad"
+        android:inputType="number"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/etProCiclo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Ciclo"
+        android:inputType="text"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/etProCurso"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Curso de tutoria"
+        android:inputType="text"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/etProDespacho"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ETColor"
+        android:hint="Despacho"
+        android:inputType="numberDecimal"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp">
+
+        //Registro
+
+        <Button
+            android:id="@+id/bRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@color/btColor"
+            android:gravity="center"
+            android:onClick="bRegistroPuls"
+            android:text="Registro" />
+
+        //Registro
+
+        <Button
+            android:id="@+id/bCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@color/btColor"
+            android:onClick="bCancelarPuls"
+            android:text="Cancelar" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/logTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Log-In"
+        android:textAlignment="center"
+        android:textColor="@color/TituloColor"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+    //Texto UserName
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="UserName"
+        android:textColor="@color/TituloColor"
+        android:textSize="20dp" />
+
+
+    //Campo UserName
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/ETColor"
+        android:textColor="@color/TituloColor" />
+
+    //Texto Pass
+
+    <TextView
+        android:id="@+id/Pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:text="Password"
+        android:textColor="@color/TituloColor"
+        android:textSize="20dp" />
+
+    //Campo Pass
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/ETColor"
+        android:inputType="textPassword"
+        android:textColor="@color/TituloColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp">
+
+        <Button
+            android:id="@+id/bLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@color/btColor"
+            android:onClick="bLoginPuls"
+            android:text="LogIn" />
+
+
+        <Button
+            android:id="@+id/bReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/btColor"
+            android:onClick="bRegPuls"
+            android:text="Registro" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

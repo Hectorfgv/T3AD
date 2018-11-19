@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="TituloColor">#fff</color>
+    <color name="ETColor2">#707c84</color>
+    <color name="bgColor2">#2e3032</color>
+
+
+    <color name="ETColor">#b9faf6</color>
+    <color name="bgColor">#00a9a1</color>
+    <color name="btColor">#7dd7d1</color>
+    <color name="bttColor">#999f9f</color>
+
+
+</resources>

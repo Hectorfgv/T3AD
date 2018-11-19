@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context=".ActivityEleccion">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Héctor Gascó \n 3A,B,C"
+        android:textAlignment="center"
+        android:textColor="@color/TituloColor"
+        android:textSize="30dp"
+
+        />
+
+    <Button
+        android:id="@+id/ACT3A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ACT3B"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@color/btColor"
+        android:onClick="act3apuls"
+        android:text="Reg/Log" />
+
+    <Button
+        android:id="@+id/ACT3B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/btColor"
+        android:onClick="act3bpuls"
+        android:text="Añadir" />
+
+    <Button
+        android:id="@+id/ACT3C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ACT3B"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@color/btColor"
+        android:onClick="act3cpuls"
+        android:text="Mostrador" />
+</RelativeLayout>

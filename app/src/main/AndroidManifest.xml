@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.danielbc.logyreg">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LogyReg" />
+        <activity android:name=".Registro" />
+        <activity android:name=".LogIn" />
+        <activity android:name=".ActivityEleccion">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AlumnoProfesor" />
+        <activity android:name=".RegAlumno" />
+        <activity android:name=".RegProfesor" />
+        <activity android:name=".Mostrador" />
+        <activity android:name=".RegAsignaturas"></activity>
+        <activity android:name=".RegPokemon"></activity>
+    </application>
+
+</manifest>

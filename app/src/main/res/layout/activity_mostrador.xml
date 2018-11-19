@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Mostrador"
+    android:background="@color/bgColor">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6">
+
+
+        <TextView
+            android:id="@+id/ensenar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/TituloColor"
+            android:textSize="20dp"/>
+
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/etBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="BUSCAR" />
+
+    <Button
+        android:id="@+id/alTodo"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Todos los alumnos"
+        android:background="@color/btColor"
+        android:onClick="alTodoPuls"/>
+
+    <Button
+        android:id="@+id/alCiclos"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Alumnos por ciclo"
+        android:layout_weight="1"
+        android:background="@color/btColor"
+        android:onClick="alCiclosPuls"/>
+
+    <Button
+        android:id="@+id/alCursos"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Alumnos por curso"
+        android:background="@color/btColor"
+        android:onClick="alCursosPuls"/>
+
+    <Button
+        android:id="@+id/proTodo"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Todos los profesores"
+        android:background="@color/btColor"
+        android:onClick="proTodoPuls"/>
+
+    <Button
+        android:id="@+id/ASGbtn"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Asignaturas"
+        android:background="@color/btColor"
+        android:onClick="ASGPuls"/>
+
+    <Button
+        android:id="@+id/bPokemon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="mostrar pokemon"
+        android:onClick="PKMPuls"/>
+
+
+</LinearLayout>
