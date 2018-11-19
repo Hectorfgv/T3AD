@@ -70,13 +70,13 @@ public class Mostrador extends AppCompatActivity {
     }
     public void PKMPuls(View V) {
 
-        ensenar.setText("Profesores \n");
+        ensenar.setText("Pokemon \n");
 
-        ArrayList<String> profesores = dbAdapter.recuperarPokemon();
+        ArrayList<String> pokemon = dbAdapter.recuperarPokemon();
 
-        for (int i = 0; i < profesores.size(); i++) {
+        for (int i = 0; i < pokemon.size(); i++) {
 
-            ensenar.setText(ensenar.getText() + "\n" + profesores.get(i) + "\n");
+            ensenar.setText(ensenar.getText() + "\n" + pokemon.get(i) + "\n");
         }
     }
 

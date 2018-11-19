@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class MyDBAdapter {
 
-    private static final String DATABASE_NAME = "DB2.db";
+    private static final String DATABASE_NAME = "DB3.db";
     private static final String DATABASE_AL = "alumnos";
     private static final String DATABASE_PRO = "profesores";
     private static final String DATABASE_ASG = "asignaturas";
@@ -121,7 +121,7 @@ public class MyDBAdapter {
         if (pokemons != null && pokemons.moveToFirst()) {
 
             do {
-                pokes.add(pokemons.getString(1) + " " + pokemons.getString(2));
+                pokes.add("Nombre: "+pokemons.getString(1) + " Tipo: " + pokemons.getString(2));
             } while (pokemons.moveToNext());
 
         }
