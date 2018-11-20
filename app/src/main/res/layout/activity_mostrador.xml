@@ -40,7 +40,8 @@
         android:layout_weight="1"
         android:text="Todos los alumnos"
         android:background="@color/btColor"
-        android:onClick="alTodoPuls"/>
+
+    />
 
     <Button
         android:id="@+id/alCiclos"

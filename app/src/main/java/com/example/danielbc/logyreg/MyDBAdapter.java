@@ -124,6 +124,17 @@ public class MyDBAdapter {
                 pokes.add("Nombre: "+pokemons.getString(1) + " Tipo: " + pokemons.getString(2));
             } while (pokemons.moveToNext());
 
+           /* int index;
+
+            index = cursor.getColumnIndexOrThrow("first_name");
+            String firstName = cursor.getString(index);
+
+            index = cursor.getColumnIndexOrThrow("last_name");
+            String lastName = cursor.getString(index);
+
+            index = cursor.getColumnIndexOrThrow("id");
+            long id = cursor.getLong(index);
+            */
         }
         return pokes;
     }
@@ -145,8 +156,35 @@ public class MyDBAdapter {
         return ASG;
     }
 
+    public ArrayList<String[]> recuperarAlumnosEdad(){
+        //Devuelvo una lista de arrays de Strings no una lista de Strings, cada array, es un alumno
+        ArrayList<String[]> est = new ArrayList<String[]>();
+
+        Cursor cursor = db.rawQuery("select * from alumnos where (EDAD BETWEEN 20 AND 25) order by ciclo", null);
+        // Cursor cursor = db.rawQuery("select * from estudiantes where (ciclo='DAM' or ciclo='DAW') order by ciclo", null);
+        if (cursor != null && cursor.moveToFirst()){
+            do{
+                //Cada columna es un valor del array
+                String [] valores = new String [5];
+                valores[0]=(cursor.getString(1));
+                valores[1]=(cursor.getString(2));
+                valores[2]=(cursor.getString(3));
+                valores[3]=(cursor.getString(4));
+                valores[4]=(cursor.getString(5));
+
+                est.add(valores);
+            }while (cursor.moveToNext());
+        }
+
+        return est;
+    }
+
+
+
 
     //EXAMEN -- METODO DE RECUPERACION DE ALUMNOS EDAD
+
+/*
     public ArrayList<String> recuperarAlumnosEdad() {
 
         ArrayList<String> alumnos = new ArrayList<String>();
@@ -178,7 +216,7 @@ public class MyDBAdapter {
         return alumnos;
     }
 
-
+*/
 
     //METODO DE INSERTAR ALUMNOS
     public void insertarAlumno(String nom, String ape, String eda, String cic, String curs, String med) {

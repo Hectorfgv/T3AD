@@ -19,13 +19,15 @@ public class Mostrador extends AppCompatActivity {
     private MyDBAdapter dbAdapter;
     private Button alTodos, alCiclo, alCurso, proTodos, Todo, pokemon;
     private EditText buscar;
+    private ArrayList<String[]> auxiliar;
+    private MyDBAdapter adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrador);
 
-
+        auxiliar = new ArrayList<String[]>();
         buscar =(EditText) findViewById(R.id.etBuscar);
         ensenar = (TextView) findViewById(R.id.ensenar);
         alTodos = (Button) findViewById(R.id.alTodo);
@@ -37,6 +39,30 @@ public class Mostrador extends AppCompatActivity {
 
         dbAdapter = new MyDBAdapter(this);
         dbAdapter.abrirBD();
+
+        alTodos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                adaptador = new MyDBAdapter(getApplicationContext());
+                adaptador.abrirBD();
+
+                auxiliar = adaptador.recuperarAlumnosEdad();
+
+                //Limpio búsquedas anteriores
+                ensenar.setText("");
+                for (String [] aux: auxiliar)
+                {
+                    //Veia innecesario hacer un for para recorrer el array debido al "fórmato" que le doy de salida.
+                    ensenar.setText(ensenar.getText()+"Nombre: "+aux[0]+"\n");
+                    ensenar.setText(ensenar.getText()+"Edad: "+aux[1]+"\n");
+                    ensenar.setText(ensenar.getText()+"Ciclo: "+aux[2]+"\n");
+                    ensenar.setText(ensenar.getText()+"Curso: "+aux[3]+"\n");
+                    ensenar.setText(ensenar.getText()+"Nota Media: "+aux[4]+"\n");
+
+                    ensenar.setText(ensenar.getText()+"\n"+"\n");
+                }
+            }
+        });
     }
 
     //BOTON TODOS LOS ALUMNOS
@@ -53,7 +79,27 @@ public class Mostrador extends AppCompatActivity {
         }
     }*/
 
+    public void alTodoPuls(View V) {
+        MyDBAdapter adaptador;
+        adaptador = new MyDBAdapter(getApplicationContext());
+        adaptador.abrirBD();
 
+        auxiliar = adaptador.recuperarAlumnosEdad();
+        ensenar.setText("Alumnos \n");
+
+
+        for (String [] aux: auxiliar)
+        {
+            //Veia innecesario hacer un for para recorrer el array debido al "fórmato" que le doy de salida.
+            ensenar.setText(ensenar.getText()+"Nombre: "+aux[0]+"\n");
+            ensenar.setText(ensenar.getText()+"Edad: "+aux[1]+"\n");
+
+
+            ensenar.setText(ensenar.getText()+"\n"+"\n");
+        }
+    }
+
+/*
     //EXAMEN
     //MOSTRAR ALUMNOS ENTRE 20 Y 25
     public void alTodoPuls(View V) {
@@ -68,6 +114,7 @@ public class Mostrador extends AppCompatActivity {
 
         }
     }
+*/
     public void PKMPuls(View V) {
 
         ensenar.setText("Pokemon \n");
